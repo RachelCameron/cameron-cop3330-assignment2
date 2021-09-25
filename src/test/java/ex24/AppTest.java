@@ -9,5 +9,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class AppTest {
-
+    @Test
+    public void isAnagramTest() {
+        assertTrue(App.isAnagram("tone", "note"));
+        assertTrue(App.isAnagram("run", "nur"));
+        assertTrue(App.isAnagram("ramble", "marble"));
+    }
 }
