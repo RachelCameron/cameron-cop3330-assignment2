@@ -31,8 +31,8 @@ public class App {
         }
         else
         {
-            char [] firstArray = first.toCharArray();
-            char [] secondArray = second.toCharArray();
+            char [] firstArray  = first.replaceAll("\\s", "").toLowerCase().toCharArray();
+            char [] secondArray = second.replaceAll("\\s", "").toLowerCase().toCharArray();
 
             Arrays.sort(firstArray);
             Arrays.sort(secondArray);
