@@ -12,9 +12,9 @@ public class App {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter two strings and I'll tell you if they are anagrams:");
-        System.out.printf("Enter the first string:");
+        System.out.println("Enter the first string:");
         String first = input.nextLine();
-        System.out.printf("Enter the second string:");
+        System.out.println("Enter the second string:");
         String second = input.nextLine();
 
         if (isAnagram(first, second))
@@ -37,13 +37,7 @@ public class App {
             Arrays.sort(firstArray);
             Arrays.sort(secondArray);
 
-            if (Arrays.equals(firstArray, secondArray)) {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return Arrays.equals(firstArray, secondArray);
         }
     }
 }
