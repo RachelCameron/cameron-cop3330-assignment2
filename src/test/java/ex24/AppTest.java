@@ -5,14 +5,24 @@ package ex24;
  *  Copyright 2021 Rachel Cameron
  */
 
-import static org.junit.Assert.assertTrue;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class AppTest {
+
     @Test
-    public void isAnagramTest() {
-        assertTrue(App.isAnagram("tone", "note"));
-        assertTrue(App.isAnagram("run", "nur"));
-        assertTrue(App.isAnagram("ramble", "marble"));
+    public void isAnagramTrue()
+    {
+        Assertions.assertTrue(ex24.App.isAnagram("tone", "note"));
+        Assertions.assertTrue(ex24.App.isAnagram("rUN", "RUn"));
+        Assertions.assertTrue(ex24.App.isAnagram("and or", "nda ro"));
+        Assertions.assertTrue(ex24.App.isAnagram("123", "321"));
+    }
+
+    @Test
+    public void isAnagramFalse()
+    {
+        Assertions.assertFalse(ex24.App.isAnagram("abc", "xyz"));
+        Assertions.assertFalse(ex24.App.isAnagram("1", "2"));
     }
 }
