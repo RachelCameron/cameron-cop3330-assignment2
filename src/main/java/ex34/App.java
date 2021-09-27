@@ -22,7 +22,7 @@ public class App {
             list = remover(removed, list);
 
             if(list.size() == 4){
-                System.out.println("There are 4 employees.");
+                System.out.println("There are 4 employees:");
                 System.out.println(list);
             }
             else{
