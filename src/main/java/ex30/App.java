@@ -9,12 +9,12 @@ public class App {
     public static void main(String[] args) {
         multiplicationTable(); }
 
-    private static void multiplicationTable() {
+    public static int multiplicationTable() {
      for (int i = 1; i <= 12; i++) {
             for (int j = 1; j <= 12; j++) {
-             System.out.printf("%4d", (i * j));
-        }
+             System.out.printf("%4d", (i * j)); }
              System.out.print("\n");
+        }
+     return 1;
     }
-}
 }
