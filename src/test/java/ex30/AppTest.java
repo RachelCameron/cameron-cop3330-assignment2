@@ -13,6 +13,6 @@ public class AppTest {
     @Test
     public void multiplicationTableTrue() {
         App AppTest = new App();
-        Assertions.assertEquals(1, AppTest.multiplicationTable());
+        Assertions.assertEquals("Printed successfully.", AppTest.multiplicationTable());
     }
 }
