@@ -8,7 +8,28 @@ package ex28;
 import java.util.Scanner;
 
 public class App {
+
+    static Scanner input = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        int[] nums = new int[5];
+        nums = getNums(nums);
+        int sum = getSum(nums);
+        System.out.println("The total is " + sum);
     }
+    public static int[] getNums(int[] nums){
+        for(int i = 0; i < 5; i++){
+            System.out.println("Enter a number: ");
+            nums[i] = input.nextInt();
+        }
+        return nums;
+    }
+    public static int getSum(int[] nums){
+        int sum = 0;
+        for(int i = 0; i < 5; i++){
+            sum = sum + nums[i];
+        }
+        return sum;
+    }
+
 }
