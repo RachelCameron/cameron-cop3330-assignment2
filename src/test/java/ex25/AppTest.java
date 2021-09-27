@@ -11,14 +11,12 @@ import org.junit.jupiter.api.Test;
 public class AppTest {
 
     @Test
-    public void passwordValidatorTrue()
-    {
-        Assertions.assertTrue(ex25.App.passwordValidator("TEST", "TEST"));
-    }
-
-    @Test
-    public void passwordValidatorFalse()
-    {
-        Assertions.assertFalse(ex25.App.passwordValidator("TEST", "TEST"));
+    public void passwordValidator() {
+        App AppTest = new App();
+        Assertions.assertEquals(1, AppTest.passwordValidator("12345"));
+        Assertions.assertEquals(2, AppTest.passwordValidator("abcdef"));
+        Assertions.assertEquals(3, AppTest.passwordValidator("abc123xyz"));
+        Assertions.assertEquals(4, AppTest.passwordValidator("1337h@xor!"));
+        Assertions.assertEquals(0, AppTest.passwordValidator("h1"));
     }
 }
