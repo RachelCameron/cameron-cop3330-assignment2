@@ -47,4 +47,8 @@ public class App {
         }
         return rate;
     }
+
+    public static double mathChecker(int age, int rate, int intensity) {
+        return ((((220.0-age)-rate)*(intensity/100.0))+rate);
+    }
 }
