@@ -11,13 +11,13 @@ public class App {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the first name: ");
+        System.out.println("Enter the first name:");
         String first = input.nextLine();
-        System.out.println("Enter the last name: ");
+        System.out.println("Enter the last name:");
         String last = input.nextLine();
-        System.out.println("Enter the ZIP code: ");
+        System.out.println("Enter the ZIP code:");
         String zip = input.nextLine();
-        System.out.println("Enter the employee ID: ");
+        System.out.println("Enter the employee ID:");
         String id = input.nextLine();
         String result = validateInput(first, last, zip, id);
         System.out.println(result);
