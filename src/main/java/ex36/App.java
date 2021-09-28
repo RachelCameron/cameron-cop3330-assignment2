@@ -41,8 +41,8 @@ public class App {
     }
     public static double average(ArrayList<Integer> numbers){
         double sum = 0;
-        for(int i = 0; i < numbers.size(); i++){
-            sum = sum + numbers.get(i);
+        for (Integer number : numbers) {
+            sum = sum + number;
         }
         return sum/numbers.size();
     }
