@@ -29,6 +29,7 @@ public class App {
                 employee.put("name", data[0]);
                 employee.put("position", data[1]);
                 employee.put("separation date", data[2]);
+                employee.put("lastnameforsorting", data[3]);
 
                 result.add(employee);
             }
@@ -42,7 +43,7 @@ public class App {
     }
 
     public static void sortEmployees(List<Map<String, String>> employees) {
-
+      //ran out of time on
     }
 
     public static void printTable(List<Map<String, String>> employees) {
