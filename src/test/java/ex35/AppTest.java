@@ -11,19 +11,14 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 
 public class AppTest {
-
     @Test
-    public void randomizerTest()
-    {
-       ex35.App AppTest = new App();
-       ArrayList<String> test = new ArrayList<>();
-       test.add("Yuri");
-       test.add("Monika");
-       test.add("Natsuki");
-       test.add("Sayori");
-       Assertions.assertTrue(test.contains(AppTest.randomizer(test)));
+    public void randomizerTest() {
+        ex35.App AppTest = new App();
+        ArrayList<String> test = new ArrayList<>();
+        test.add("Yuri");
+        test.add("Monika");
+        test.add("Natsuki");
+        test.add("Sayori");
+        Assertions.assertTrue(test.contains(App.randomizer(test)));
     }
-
-
-
 }
