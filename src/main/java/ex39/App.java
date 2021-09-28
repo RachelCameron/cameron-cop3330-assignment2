@@ -20,21 +20,20 @@ public class App {
         List<Map<String, String>> result = new ArrayList<>();
 
         try {
-            Scanner scanner = new Scanner(new File("employees.txt"));
-            while (scanner.hasNextLine()) {
-                String line = scanner.nextLine();
+            Scanner input = new Scanner(new File("employees.txt"));
+            while (input.hasNextLine()) {
+                String line = input.nextLine();
                 String[] data = line.split(";");
 
                 Map<String, String> employee = new HashMap<>();
-                employee.put("first name", data[0]);
-                employee.put("last name", data[1]);
-                employee.put("position", data[2]);
-                employee.put("separation date", data[3]);
+                employee.put("name", data[0]);
+                employee.put("position", data[1]);
+                employee.put("separation date", data[2]);
 
                 result.add(employee);
             }
 
-            scanner.close();
+            input.close();
         } catch (FileNotFoundException e) {
             System.out.println("Error: Could not find employees.txt file!");
         }
@@ -47,12 +46,12 @@ public class App {
     }
 
     public static void printTable(List<Map<String, String>> employees) {
-        System.out.format("%-15s| %-15s| %-15s%n", "Name", "Position",
+        System.out.format("%-19s| %-18s| %-15s%n", "Name", "Position",
                 "Separation Date");
-        System.out.println("---------------------------------------------");
+        System.out.println("--------------------------------------------------------");
         for (Map<String, String> e : employees) {
-            System.out.format("%-15s| %-15s| %-15s%n", e.get("first name"),
-                    e.get("last name"), e.get("separation date"));
+            System.out.format("%-15s| %-15s| %-15s%n", e.get("name"),
+                    e.get("position"), e.get("separation date"));
         }
     }
 }
